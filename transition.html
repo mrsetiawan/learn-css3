@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Transition</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+
+        <style>
+
+            *{
+                padding: 0;
+                margin: 0;
+            }
+
+            .container {
+                width: 900px;
+                border:2px solid black;
+                margin: 10% auto 0;
+                cursor: pointer;
+            }
+            
+            .box {
+                width: 100px;
+                height: 100px;
+                background-color: salmon;
+                margin-bottom: 5px;
+            }
+
+            .boxnew {
+                width: 100px;
+                height: 100px;
+                background-color: purple;
+                margin-bottom: 5px;
+            }
+
+            .boxnew2 {
+                width: 100px;
+                height: 100px;
+                background-color: royalblue;
+                margin-bottom: 5px;
+            }
+
+            .boxnew3 {
+                width: 100px;
+                height: 100px;
+                background-color: aqua;
+                margin-bottom: 5px;
+                line-height: 100px;
+                text-align: center;
+                transition: all 1s ease-in-out;
+            }
+
+            .box1 {
+                transition: margin-left 1s ease;
+                line-height: 100px;
+                color: white;
+                text-align: center; 
+            }
+
+            .box2 {
+                transition: all 1s ease-in;
+                line-height: 100px;
+                color: white;
+                text-align: center; 
+            }
+
+            .box3 {
+                text-align: center;
+                line-height: 100px;
+                transition: all 1s ease-out;
+                color: white;
+            }
+            
+            .container:hover .box {
+                transform: rotate(360deg);  
+                background-color: purple;
+                margin-left: 800px;
+                border-radius: 50%;
+            }
+
+            .container:hover .boxnew {
+                transform: rotate(360deg);  
+                background-color: salmon;
+                margin-left: 800px;
+                border-radius: 50% 0 50% 0;
+            }
+
+            .container:hover .boxnew2 {
+                transform: rotate(360deg);  
+                background-color: yellowgreen;
+                margin-left: 800px;
+                border-radius: 0 50% 50% 0;
+            }
+
+            .container:hover .boxnew3 {
+                transform: rotate(360deg);
+                background-color: brown;
+                border-radius: 50%;
+                margin-left: 800px;
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box box1">ease</div>
+            <div class="boxnew box2">ease in</div>
+            <div class="boxnew2 box3">ease out</div>
+            <div class="boxnew3">ease in out</div>
+        </div>
+    </body>
+</html>

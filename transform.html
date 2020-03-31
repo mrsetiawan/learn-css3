@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Css Transform</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <style>
+
+            html {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .box {
+                width: var(--wh);
+                height: var(--wh);
+                background-color: salmon;
+                /* margin: 50% auto 50%; */
+                transition: .5s;
+                float: left;
+                margin: 15px;
+            }
+
+            .box:hover{
+                /* transform: scaleX(2) scaleY(1.5);     */
+                /* transform: scaleX(2);  */
+                /* scale untuk menambah ukuran */
+                transform: scale(2);
+                cursor: pointer;
+            }
+
+            .box2 {
+                width: var(--wh);
+                height: var(--wh);
+                float: left;
+                margin: 15px;
+                border: 2px solid salmon;
+                transition: .5s;
+            }
+
+            .box2 img:hover {
+                transform: scale(1.5);
+                cursor: pointer;
+                transition: .5s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+
+        <div class="box2">
+            <img src="kodir1.jpg" alt="tes" width="300px" height="300px">
+        </div>
+    </body>
+</html>

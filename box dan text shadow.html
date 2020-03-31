@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Box shadow dan text shadow font face dan vendor prefixes</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+
+        <style>
+
+            /* 
+            caniuse.com utk melihat properti css yang support di setiap browser
+            pleeease.io/play website utk generate css kedalam vendor prefix
+            -webkit-(chrome,safari,opera versi baru)
+            -moz-(firefox)
+            -ms-(internet exploler)
+            -o-(opera versi dulu)
+            
+            
+            */
+            @font-face {
+                font-family: 'Roboto', sans-serif;
+                src: url('fonts/Roboto-Black.ttf') format('truetype');
+            }
+
+            .box {
+                width: var(--wh);
+                height: var(--wh);
+                background-color: salmon;
+                box-shadow: 0 10px 20px grey;
+                float: left;
+                display: inline-block;
+                transition: 0.3ms;
+                margin: 15px;
+            }
+
+            .box:hover{
+                box-shadow: 10px 10px 20px grey;
+            }
+
+            h1 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 50px;
+                color: white;
+                text-shadow: 0 2px 1px black;
+                display: inline-block;
+            }
+
+            h2 {
+                font-family: 'Roboto', sans-serif;
+                font-size: 50px;
+                text-shadow: 2px 4px 3px red, -2px -4px 0 yellow;
+            }
+
+            img {
+                /* -webkit-filter: grayscale(100%); */
+                -webkit-filter: saturate(100%);
+                width: var(--wh);
+                height: var(--wh);
+            }
+
+            img:hover {
+                -webkit-filter: blur(5px);
+                width: var(--wh);
+                height: var(--wh);
+                cursor: pointer;
+                transition-duration: 0.5ms;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <h1>Hello World</h1>
+        <h2>Hello World</h2>
+
+        <img src="kodir1.jpg" alt="kodir">
+    </body>
+</html>
