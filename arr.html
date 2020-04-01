@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>sort</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <script>
+            'use strict'
+            function largeArr(arr){
+                const data = arr
+                let tes = data.filter(res => res.length >= 4)
+                console.log(tes);
+            }
+
+            function dataArr(){
+                let s = [4,5,-2,3,1,2,6,6];
+                return s;
+            }
+
+            console.log(largeArr(dataArr()));
+            
+
+            // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+
+            // const result = words.filter(word => word.length > 6);
+
+            // console.log(result);
+
+        </script>
+    </body>
+</html>
