@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sidebar</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+        <style>
+            body{
+                background-color: #f4f4f4;
+                font-family: "Arial",serif;
+            }
+
+            .navbar {
+                background-color: royalblue;
+                height: 65px;
+                overflow: hidden;
+            }
+
+            .navbar a {
+                float: left;
+                display: block;
+                color:#f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: .5s ease;
+            }
+
+            .navbar ul{
+                padding: 8px 0 0 0;
+                list-style: none;
+            }
+
+            .navbar a:hover {
+                color: salmon;
+                -webkit-filter: 
+            }
+
+            .side-nav {
+                width: 0;
+                height: 100vh;
+                position: fixed;
+                top: 0;
+                bottom: 0;
+                background-color: #111;
+                color:#f2f2f2;
+                transition: .5s ease-in-out;
+                opacity: 0.9;
+                overflow-x: hidden;
+                padding: 60px 0 0 0;
+            }
+
+            .side-nav a {
+                color: #f2f2f2;
+                display: block;
+                padding: 10px 10px 10px 30px;
+                text-decoration: none;
+                transition: .5 ease;
+            }
+
+            .side-nav a:hover {
+                color:salmon;
+            }
+
+            .btn-close {
+                position: absolute;
+                top:0;
+                left: 73%;
+                font-size: 35px;
+            }
+
+            #main {
+                transition: var(--transition);
+            }
+
+            .open-slide {
+                transition: var(--transition);
+                color: #f2f2f2;
+            }
+
+            /* .hamburger {
+                font-size: 29px;
+
+            } */
+
+            @media(max-width: 587px){
+                .navbar-nav {display: none}
+            }
+            
+        
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div class="navbar">
+                <div id="openSlide" class="open-slide">
+                    <a href="#" onclick="openSideMenu();">
+                        <svg viewBox="0 0 100 80" width="40" height="40">
+                            <rect width="100" height="20"></rect>
+                            <rect y="30" width="100" height="20"></rect>
+                            <rect y="60" width="100" height="20"></rect>
+                        </svg>
+                        <!-- <span class="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></span> -->
+                    </a>
+                </div>
+
+                <ul class="navbar-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, rerum.</p>
+            </div>
+            
+        </div>
+
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSideMenu();">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <script>
+            function openSideMenu(){
+                document.getElementById('side-menu').style.width = '250px'
+                document.getElementById('main').style.marginLeft = '250px'
+                document.getElementById('openSlide').style.display = "none";
+            }
+
+            function closeSideMenu(){
+                document.getElementById('side-menu').style.width = '0';
+                document.getElementById('main').style.marginLeft = '0';
+                document.getElementById('openSlide').style.display = "block";
+            }
+        
+        </script>
+    </body>
+</html>

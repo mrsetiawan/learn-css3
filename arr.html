@@ -19,14 +19,34 @@
                 return s;
             }
 
-            console.log(largeArr(dataArr()));
+            // console.log(largeArr(dataArr()));
             
+            function firstName(m){
+                return function(r){
+                    return function(s){
+                        return `hi nama saya adalah ${m} ${r} ${s}`;
+                    }   
+                }
+            }
 
-            // const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+            var first = firstName("muhamad");
+            var middle = first("rahmat");
+            console.log(middle("setiawan"));
 
-            // const result = words.filter(word => word.length > 6);
+            //ini adalah contoh yang salah karena di javascript itu data ygn disimpan kedalam memory harus immutable
+            // let meja = ['laci1','laci2','laci3'];
+            // meja[2] = 'laci4';
+            // console.log(meja);
 
-            // console.log(result);
+            //contoh penyimpanan data immutable
+            let rumah = ['pintu','jendela','ruangan'];
+            let ubah = rumah.concat('genteng');
+            // console.log(ubah);
+
+            let kantor = ['meja','orang','papan tulis','meeting'];
+            let kantorMe = kantor.map(function (k) {k == 'meja' ? 'kuris' : k});
+
+            console.log(kantorMe);
 
         </script>
     </body>
