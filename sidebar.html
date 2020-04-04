@@ -85,11 +85,27 @@
                 font-size: 29px;
 
             } */
-
-            @media(max-width: 587px){
-                .navbar-nav {display: none}
+            .container-1 div{
+                border: 1px solid #dcdcdc;
+                padding: 10px;
+                margin: 15px;
             }
-            
+
+            .container-1 {
+                display: flex;
+            }
+
+            .box1{
+                flex: 4;
+            }
+
+            .box2{
+                flex: 4;
+            }
+
+            .box3 {
+                flex: 4;
+            }
         
         </style>
     </head>
@@ -115,10 +131,21 @@
                 </ul>
             </div>
 
-            <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, rerum.</p>
+            <div class="container-1">
+                <div class="box1">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, eveniet!</p>
+                </div>
+                <div class="box2">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, eveniet!</p>
+                </div>
+                <div class="box3">
+                    <h3>Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, eveniet!</p>
+                </div>
             </div>
-            
+
         </div>
 
         <div id="side-menu" class="side-nav">

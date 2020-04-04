@@ -8,3 +8,7 @@
     --wh: 300px;
     --transition: .5s ease-in-out;
 }
+
+@media(max-width: 587px){
+    .navbar-nav {display: none}
+}
